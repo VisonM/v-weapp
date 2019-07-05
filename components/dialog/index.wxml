@@ -1,0 +1,15 @@
+<!--components/dialog/index.wxml-->
+
+<v-mask maskCancel="{{ maskClose }}" visible="{{ _maskShadow }}" bind:onClose="handleClose" />
+
+<view
+ class="v-dialog {{ _animate_visible ? 'v-dialog-show' : 'v-dialog-hide'}}"
+ hover-class="none"
+ hover-stop-propagation="false"
+ style="width: {{ width }};{{ height ? 'height: ' + height + ';' : '' }};"
+ animation="{{ _animation }}"
+>
+	<view class="slot-warp">
+		<slot/>
+	</view>
+</view>

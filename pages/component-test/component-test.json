@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "v-cell-group": "./../../components/cell-group/index",
+    "v-cell":"./../../components/cell/index",
+    "v-panel":"./../../components/panel/index",
+    "v-switch":"./../../components/switch/index",
+    "v-rate":"./../../components/rate/index",
+    "v-button":"./../../components/button/index",
+    "v-dialog":"./../../components/dialog/index",
+    "v-segment":"./../../components/segment/index",
+    "v-tabs":"./../../components/tabs/index",
+    "v-input":"./../../components/input/index",
+    "v-toast":"./../../components/toast/index",
+    "v-loading":"./../../components/loading/index",
+    "v-marquee":"./../../components/marquee/index",
+    "v-marquee-item":"./../../components/marquee-item/index"
+  }
+}

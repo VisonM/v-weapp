@@ -1,0 +1,6 @@
+<!--pages/lottie/index.wxml-->
+<view class='lottie-container'>
+  <view style='width:{{width}}px;height:{{height}}px'>
+    <lottie id="lottie" path="{{aniPath}}" width="{{width}}" height="{{height}}" animation-data="{{anidata}}" />
+  </view>
+</view>

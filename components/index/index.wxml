@@ -1,0 +1,12 @@
+<view class="i-index i-class">
+  <scroll-view scroll-y style="height:100vh" bindscroll="handlerScroll" scroll-top="{{scrollTop}}">
+    <slot></slot>
+    <view class='i-index-sticky' wx:if="{{sticky}}">{{currentName}}</view>
+    <view class="i-index-fixed" catchtouchstart="handlerTouchMove" catchtouchmove="handlerTouchMove" catchtouchend="handlerTouchEnd">
+      <view class="i-index-fixed-item {{currentName === item ? 'i-index-fixed-item-current':''}}" wx:for="{{fixedData}}" wx:key="{{index}}" data-index="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <view class="i-index-tooltip" wx:if="{{isTouches}}">{{currentName}}</view>
+  </scroll-view>
+</view>

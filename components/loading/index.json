@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-mask":"./../mask/index",
+    "v-lottie":"./../../miniprogram_npm/lottie-miniapp/component/lottie"
+  }
+}

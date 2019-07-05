@@ -1,0 +1,4 @@
+<!--components/marquee-item/index.wxml-->
+<view class="wuss-class wuss-marquee-slide-item" hover-class="none" hover-stop-propagation="false" bindtap="handleClick">
+  <slot/>
+</view>

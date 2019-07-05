@@ -1,0 +1,71 @@
+/* pages/component-test/component-test.wxss */
+
+.test-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  background: red;
+  padding: 40rpx;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.test-fixed:hover {
+  visibility: visible;
+  background: gray;
+}
+
+.test-fixed-show {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 3s;
+}
+
+.test-fixed-hide {
+  /* display: none; */
+  opacity: 0;
+  animation: fadeOut 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  99% {
+    display: block;
+    opacity: 0.01;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.marquee-item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 88rpx;
+  padding-left: 20rpx;
+}

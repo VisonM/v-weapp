@@ -1,0 +1,71 @@
+/* components/cell/index.wxss */
+
+.v-cell {
+  position: relative;
+  padding: 20rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.v-cell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e9eaec;
+  border-bottom-width: 1px;
+  left: 20rpx;
+  right: 0;
+}
+
+.v-cell-last::after {
+  display: none;
+}
+
+.v-cell-icon {
+  margin-right: 15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.v-cell-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.v-cell-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.v-cell-footer {
+  padding-right: 13px;
+  position: relative;
+  line-height: 60rpx;
+  height: 60rpx;
+  /* background: red; */
+}
+
+.i-cell-access .v-cell-footer::after {
+  content: " ";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  border-width: 2px 2px 0 0;
+  border-color: #dddee1;
+  border-style: solid;
+  transform: translateY(-50%) matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}

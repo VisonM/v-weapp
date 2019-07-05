@@ -1,0 +1,6 @@
+<view class="i-index-item" bindtap='handleItemClick'>
+  <view class="i-index-item-header">{{name}}</view>
+  <view class="i-index-item-content">
+    <slot></slot>
+  </view>
+</view>

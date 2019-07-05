@@ -1,0 +1,17 @@
+<!--components/cell/index.wxml-->
+<view class="v-cell {{ isLastCell ? ' v-cell-last ' : ' ' }} {{ isLink ? 'i-cell-access ' : ' ' }}" bindtap='handleClick'>
+  <view class='v-cell-icon'>
+    <image src='https://i.loli.net/2017/08/21/599a521472424.jpg'></image>
+  </view>
+  <view class='v-cell-content'>
+    <text class='v-cell-title' wx:if="{{title}}">{{title}}</text>
+    <text class='v-cell-label' wx:if="{{label}}">{{label}}</text>
+    <slot name="description"></slot>
+  </view>
+  <view class="v-cell-footer">
+    <block wx:if="{{value}}">{{ value||'value' }}</block>
+    <block wx:else>
+      <slot name="footer"></slot>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--components/rate/index.wxml-->
+<view class="i-class i-rate" bindtouchmove="handleTouchMove">
+  <input type="text" :name="name" wx:value="{{value}}" class="i-rate-hide-input" />
+  <view wx:for="{{count}}" wx:key="{{item}}" class="i-rate-star {{ parse.getCurrent( value,index ) }}" data-index="{{index}}" bindtap="handleClick">
+    <view class="cricle">{{index+1}}</view>
+  </view>
+  <view class="i-rate-text" wx:if="{{ value !== 0 }}">
+    <text wx:if="{{evaluation}}">{{parse.evaluation(count,value)}}</text>
+    <slot></slot>
+  </view>
+</view>
+<wxs module="parse">
+  var prefixCls = 'i-rate';
+  module.exports = {
+    getCurrent: function(value, index) {
+      if (index < value) {
+        return prefixCls + '-current'
+      }
+    },
+    evaluation:function(count, value) {
+      var percent=value/count
+      if(percent>0.8){
+        return "非常棒"
+      }else if(percent>0.6){
+        return "满意"
+      }else if(percent>0.4){
+        return "一般"
+      }else{
+        return "差"
+      }
+    } 
+  }
+</wxs>

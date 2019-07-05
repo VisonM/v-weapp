@@ -1,0 +1,7 @@
+<!--components/cell-group/index.wxml-->
+<view class='v-cell_group'>
+  <view class='v-cell_group__title' wx:if="title">
+    {{title}}
+  </view>
+  <slot></slot>
+</view>

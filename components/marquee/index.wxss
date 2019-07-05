@@ -1,0 +1,9 @@
+/* components/marquee/index.wxss */
+
+.wuss-marquee {
+  overflow: hidden;
+}
+
+.wuss-marquee-slide {
+  transition: all 0.4s;
+}

@@ -1,0 +1,23 @@
+<!--components/segment/index.wxml-->
+<view
+ class="v-class v-segmented {{ disabled ? 'v-segmented-disabled' : '' }}"
+ hover-class="none"
+ hover-stop-propagation="false"
+ bindtap="_handleClick"
+ style="{{ color ? 'border-color: ' + color + ';' : '' }}"
+>
+	<block
+	 wx:for="{{ options }}"
+	 wx:key="index"
+	>
+		<view
+		 data-index="{{ index }}"
+     class="v-segmented-view {{ _currentIndex === index ? 'v-segmented-view-active' : '' }}"
+     style="{{ styles }} {{ color && _currentIndex === index ?  'background-color: ' + color + ';' : 'color: ' + color + ';border-color: ' + color + ';' }}"
+		 hover-class="v-segmented-view-hover"
+		 hover-stop-propagation="false"
+		>
+			{{ item }}
+		</view>
+  </block>
+</view>
